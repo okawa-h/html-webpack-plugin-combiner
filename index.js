@@ -40,7 +40,7 @@ class HtmlWebpackPluginCombiner {
       items.forEach(itemPath => {
         if (path.extname(itemPath) === '.pug') {
 
-          const dir = itemPath.replace(folderPath, '').replace(path.basename(itemPath), '');
+          const dir = itemPath.replace(this.srcRoute, '').replace(path.basename(itemPath), '');
           const name = this.getName(itemPath);
           result.push({
             filename: `${dir}${name}.html`,
