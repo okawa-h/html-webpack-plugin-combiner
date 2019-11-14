@@ -41,7 +41,7 @@ class HtmlWebpackPluginCombiner {
         if (path.extname(itemPath) === '.pug') {
 
           const dir = itemPath.replace(this.srcRoute, '').replace(path.basename(itemPath), '');
-          const name = this.getName(itemPath);
+          const name = path.basename(itemPath, path.extname(itemPath));
           result.push({
             filename: `${dir}${name}.html`,
             template: './' + itemPath
@@ -53,12 +53,6 @@ class HtmlWebpackPluginCombiner {
     };
     readTopDirSync(folderPath);
     return result;
-
-  }
-
-  getName(filename) {
-
-    path.basename(filename, path.extname(filename));
 
   }
 

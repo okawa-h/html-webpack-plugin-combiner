@@ -1,6 +1,6 @@
 {
   "name": "html-webpack-plugin-combiner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "html-webpack-plugin-combiner is a wrap library for html-webpack-plugin",
   "main": "index.js",
   "scripts": {
